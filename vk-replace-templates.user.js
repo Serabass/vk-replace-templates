@@ -47,8 +47,8 @@
 			return expression + '=' + eval(expression);
 		}]);
 		
-		patterns.push([/\*(\w+)$/, function (match, id) {
-			return 'vk.com/' + id;
+		patterns.push([/\*(:me|\w+)$/, function (match, id) {
+			return 'vk.com/' + (id === ':me' ? ('id' + vk.id) : id);
 		}]);
 		
 		patterns.push([/\w+\/\w+$/, function (match) {

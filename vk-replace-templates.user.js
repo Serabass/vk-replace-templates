@@ -39,6 +39,10 @@
 			return 'vk.com/' + id;
 		}]);
 		
+		patterns.push([/\w+\/\w+$/, function (match) {
+			return 'github.com/' + match;
+		}]);
+		
 		for (var i = 0; i < patterns.length; i++) {
 			var pattern = patterns[i];
 			if (pattern[0].test(text)) {

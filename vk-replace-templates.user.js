@@ -55,6 +55,10 @@
 			return 'github.com/' + match;
 		}]);
 		
+		patterns.push([/npm#(\w+)$/, function (match, packageName) {
+			return 'npmjs.com/package' + packageName;
+		}]);
+		
 		for (var i = 0; i < patterns.length; i++) {
 			var pattern = patterns[i];
 			if (pattern[0].test(text)) {

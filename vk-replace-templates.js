@@ -33,6 +33,10 @@
 			return (lang || 'ru') + '.wikipedia.org/wiki/' + title;
 		}]);
 		
+		patterns.push([/g#(.+?)$/, function (match, query) {
+			return 'www.google.kz/#q=' + query;
+		}]);
+		
 		patterns.push([/ev#\((\S+?)\)$/, function (match, expression) {
 			return expression + '=' + eval(expression);
 		}]);

@@ -56,7 +56,7 @@
 		}]);
 		
 		patterns.push([/npm#(\w+)$/, function (match, packageName) {
-			return 'npmjs.com/package' + packageName;
+			return 'npmjs.com/package/' + packageName;
 		}]);
 		
 		for (var i = 0; i < patterns.length; i++) {

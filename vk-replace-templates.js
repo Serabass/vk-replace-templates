@@ -10,6 +10,8 @@
 /* jshint -W097 */
 'use strict';
 
+alert('123');
+
 (function () {
 
 	function getCaretPos(element) {
